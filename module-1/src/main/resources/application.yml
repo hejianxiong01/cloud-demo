@@ -1,0 +1,29 @@
+server:
+  # 端口
+  port: 18081
+
+spring:
+  application:
+    name: testName1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: He89757689
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+    map-underscore-to-camel-case: true
+    
+bill-info-convert:
+  url: http://172.20.10.5:8089/file/convert
+  message: 尊敬的用户您好，户名%s、户号%s的用户，在%s月用电%s度，电费合计%s元。请您保持电费充足，以免耽误您正常用电。

@@ -10,8 +10,8 @@
   <version>${revision}</version>
 
   <modules>
-    <module>moudle-1</module>
-    <module>moudle-2</module>
+    <module>module-1</module>
+    <module>module-2</module>
     <module>common</module>
   </modules>
 
@@ -33,10 +33,17 @@
     <lombok-version>1.16.18</lombok-version>
     <http-version>4.5.6</http-version>
     <jupiter-version>5.3.2</jupiter-version>
+    <spring-cloud-fegin-version>1.4.5.RELEASE</spring-cloud-fegin-version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-feign</artifactId>
+        <version>${spring-cloud-fegin-version}</version>
+      </dependency>
 
       <dependency>
         <groupId>com.example</groupId>
